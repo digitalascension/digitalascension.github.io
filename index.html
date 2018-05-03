@@ -46,7 +46,7 @@
 					<p>Information Technology Consulting For The Modern World</p>
 					<ul class="actions">
 						<li><a href="#" class="button special">Contact</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
+						<li><a href="#main" class="button">Learn More</a></li>
 					</ul>
 				</section>
 
@@ -66,7 +66,7 @@
 
 					<section class="box special features">
 						<div class="features-row">
-							<section>
+							<section id = "services">
 								<span class="icon major fa-bolt accent2"></span>
 								<h3>Web Design</h3>
 								<p>Our goal is to help businesses differentiate themselves within the marketplace. We will work with you to create amazing web experiences that your customers will love.
@@ -198,6 +198,15 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				$('ul.actions').find('a').click(function(){
+    				var $href = $(this).attr('href');
+    				var $anchor = $($href).offset();
+    				$('body').animate({ scrollTop: $anchor.top });
+    				return false;
+				});
+			</script>
 
 	</body>
 </html>
